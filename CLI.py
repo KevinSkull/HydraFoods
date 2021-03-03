@@ -1,4 +1,4 @@
-# Command Line interface test setup for the backend
+# Command Line interface test setup for the backend to add information to the database
 
 while True:
     try:
