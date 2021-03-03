@@ -1,4 +1,5 @@
 # Command Line interface test setup for the backend to add information to the database
+from MySQLconnector import *
 
 while True:
     try:
