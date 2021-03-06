@@ -11,7 +11,7 @@ def insert_orders(tablename, full_nameS, amountI, addressS):
         one_row = "INSERT INTO {} ({}) VALUES ({})".format(tablename, formatted_atk_list, formatted_record_list)
         commands.execute(one_row)
         db_setup.commit()
-        print("Record(s) have been inserted successfully")
+        print("Order has been recorded")
         input("Press Enter")
 
     except ValueError:
@@ -20,14 +20,17 @@ def insert_orders(tablename, full_nameS, amountI, addressS):
 
 
 def order_setup():
-    fullname = str(input("Please enter your full name: "))
+
     amount = int(input("Please enter the amount you wish to order: "))
-    address = str(input("Please enter your full address: "))
-    return fullname, amount, address
+
+    return amount
 
 
+fullname = str(input("Please enter your full name: "))
+address = str(input("Please enter your full address: "))
 while True:
     try:
+
         choice = int(input("Pick a choice between foods\n"
                                "1. Chips\n"
                                "2. Fish\n"
@@ -36,21 +39,21 @@ while True:
                                "5 or 0 to exit: "))
 
         if choice == 1:
-            fullname, amount, address = order_setup()
+            amount = order_setup()
             table_name = "chips_ordering"
             insert_orders(table_name, fullname, amount, address)
-
         elif choice == 2:
-            fullname, amount, address = order_setup()
+            amount = order_setup()
             table_name = "fish_ordering"
         elif choice == 3:
-            fullname, amount, address = order_setup()
+            amount = order_setup()
             table_name = "chicken_ordering"
         elif choice == 4:
-            fullname, amount, address = order_setup()
+            amount = order_setup()
             table_name = "burger_ordering"
-        elif choice == 5 | choice == 0:
+        elif choice == 5 or choice == 0:
             exit()
+            break
     except ValueError:
         print("You have entered a wrong value.")
 
