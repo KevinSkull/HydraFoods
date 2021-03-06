@@ -13,9 +13,17 @@ def insert_orders(tablename, full_nameS, amountI, addressS):
         db_setup.commit()
         print("Record(s) have been inserted successfully")
         input("Press Enter")
-    except:
+
+    except ValueError:
         print("You have entered something wrong")
         input("Press Enter")
+
+
+def order_setup():
+    fullname = str(input("Please enter your full name: "))
+    amount = int(input("Please enter the amount you wish to order: "))
+    address = str(input("Please enter your full address: "))
+    return fullname, amount, address
 
 
 while True:
@@ -25,23 +33,23 @@ while True:
                                "2. Fish\n"
                                "3. Chicken\n"
                                "4. Burgers\n"
-                               ": "))
+                               "5 or 0 to exit: "))
 
         if choice == 1:
-            fullname = str(input("Please enter your full name: "))
-            amount = int(input("Please enter the amount you wish to order: "))
-            address = str(input("Please enter your full address: "))
+            fullname, amount, address = order_setup()
             table_name = "chips_ordering"
             insert_orders(table_name, fullname, amount, address)
-            exit()
 
         elif choice == 2:
-            print("Placeholder for SQL code")
+            fullname, amount, address = order_setup()
+            table_name = "fish_ordering"
         elif choice == 3:
-            print("Placeholder for SQL code")
+            fullname, amount, address = order_setup()
+            table_name = "chicken_ordering"
         elif choice == 4:
-            print("Placeholder for SQL code")
-        elif choice == 5:
+            fullname, amount, address = order_setup()
+            table_name = "burger_ordering"
+        elif choice == 5 | choice == 0:
             exit()
     except ValueError:
         print("You have entered a wrong value.")
