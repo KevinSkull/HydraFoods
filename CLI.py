@@ -2,7 +2,7 @@
 from MySQLconnector import *
 
 
-def insert_orders(tablename ,full_nameS, amountI, addressS):
+def insert_orders(tablename, full_nameS, amountI, addressS):
     try:
         records_list = [full_nameS, amountI, addressS]
         attributes_list = ['full_name', 'amount', 'address']
