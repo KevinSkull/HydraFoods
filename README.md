@@ -4,14 +4,29 @@ HydraFoods
 The backend for the website HydraFoods, written in python for windows and linux
 Here is the [**website**](to-be-done)
 
-
-## License
-
-Most files are licensed under the terms of /to be done/; see LICENSE file for details.
-
-
 ## Prerequisites
 
 * MySQL Community Server **Use Legacy Authetication Method**
 * Python 3.8
 * mysql-connector package
+
+## Contributing
+
+We welcome any contributions from anyone. 
+to proceed please see our [guidelines for contributing](https://github.com/KevinSkull/HydraFoods/CONTRIBUTING.md).
+
+## License
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+> http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+A copy of the license is available in the repository's [LICENSE](./LICENSE) file.
