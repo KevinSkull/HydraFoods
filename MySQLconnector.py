@@ -3,11 +3,7 @@ import mysql.connector as connector
 
 
 # requires a user to connect to the DB
-def user_access_db(hostname, username, password, db_name):
-    database_entry = connector.connect(host=hostname, user=username, passwd=password, port="3306",
-                                               database=db_name)
 
-    return database_entry
 
 
 db_access = 0
@@ -17,28 +13,25 @@ try:
 
         hostname = "localhost"
 
-        username = "customers" 
+        username = "customers"
         #username = "root"
         password = "customer"
 #        password = ""
-        db_name = "food_ordering" 
+        db_name = "food_ordering"
  #       db_name = "wordpress_db"
-        try:
-            db_setup = user_access_db(hostname, username, password, db_name)
-            commands = db_setup.cursor()
 
-        except:
-            print("\nWrong Values were entered, please restart the program.")
-            exit()
-    else:
-        print("Please restart the program and enter the correct values between 0-1")
-        exit(0)
+
+        database_entry = connector.connect(host=hostname,
+                                               user=username,
+                                               passwd=password,
+                                               port="3307",
+                                               database=db_name)
+
+        commands = database_entry.cursor()
 
 
 except ValueError:
     print("Please restart the program and enter the correct values between 0-1")
-    exit()
 
-
-
+exit()
 
