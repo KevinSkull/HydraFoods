@@ -1,7 +1,7 @@
 HydraFoods
 =====
-The backend for the website HydraFoods, written in python for windows and linux
-Here is the [**website**](to-be-done)
+The backend for the website HydraFoods, written in python for Windows and Linux
+Here is the [**website**](https://hydrafoodscom.wordpress.com/home/)
 
 ## Prerequisites
 * MySQL Community Server **Use Legacy Authentication Method**
@@ -10,7 +10,7 @@ Here is the [**website**](to-be-done)
 
 ## Contributing
 We welcome any contributions from anyone. 
-to proceed please see our [guidelines for contributing](https://github.com/KevinSkull/HydraFoods/CONTRIBUTING.md).
+to proceed please see our [guidelines for contributing](https://github.com/KevinSkull/HydraFoods/blob/master/CONTRIBUTING.md).
 
 ## License
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,4 +25,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [LICENSE](./LICENSE) file.
+A copy of the license is available in the repository's [LICENSE](https://github.com/KevinSkull/HydraFoods/blob/master/LICENSE.md) file.
