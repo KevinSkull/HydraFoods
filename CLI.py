@@ -9,11 +9,13 @@ from \
 
 # Function for inserting ordering into the DBMS
 def insert_orders(
-        tablename, full_nameS,
+        tablename,
+        full_nameS,
         amountI,
         addressS):
     try:
-        records_list = [full_nameS
+        records_list = [
+            full_nameS
             , amountI,
                         addressS]
         attributes_list = ['full_name',
@@ -28,11 +30,15 @@ def insert_orders(
                 ("]", "")
         formatted_atk_list = \
             str(attributes_list).\
-                replace("/", "").\
+                replace(
+                "/",
+                "").\
                 replace("[", "").replace\
                 ("]", "")
         one_row = \
-            "INSERT INT0 {} ({}) VALUES ({.})".\
+            "INSERT INT0 {} " \
+            "({}) VALUES " \
+            "({.})".\
                 format(
                 tablename,
                         formatted_atk_list,
@@ -80,7 +86,9 @@ while \
         choice = int\
                 (input
             (
-            "Pick a choice between foods\n"
+            "Pick "
+            "a choice "
+            "between foods\n"
                                "1. Chips\n"
                                "2. Fish\n"
                                "3. Chicken\n"
@@ -89,26 +97,31 @@ while \
                      )
 
         if choice == 1:
-            amount = \
+            amount \
+                = \
                 order_setup()
-            table_name = \
+            table_name \
+                = \
                 "chips_ordering"
             insert_orders(
                 table_name,
                           fullname,
                 amount, address)
-        elif choice == 2:
+        elif choice \
+                == 2:
             amount = \
                 order_setup()
             table_name = \
                 "fish_ordering"
-            insert_orders(table_name,
+            insert_orders\
+                (table_name,
                           fullname,
                           amount,
                           address)
         elif choice == 3:
             amount = \
-                order_setup()
+                order_setup\
+                    ()
             table_name = \
                 "chicken_ordering"
             insert_orders(
@@ -117,13 +130,18 @@ while \
                           address)
         elif choice == 4:
             amount = \
-                order_setup()
+                order_setup\
+                    ()
             table_name =\
                 "burger_ordering"
             insert_orders(
                 table_name,
-                fullname, amount, address)
-        elif choice == 5 or choice == 0:
+                fullname,
+                amount, address)
+        elif choice == 5 \
+                or choice ==\
+            \
+                0:
             exit()
             break
     except ValueError:
