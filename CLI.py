@@ -72,10 +72,12 @@ def order_setup():
 
 # Variables called before entering the loop once
 fullname = \
-    str(input
+    str(
+        input
         ("Please enter your full name: "))
 address = str\
-    (input(
+    (
+        input(
         "Please enter your full address: "))
 
 # Loop for users to pick an order type
@@ -118,7 +120,8 @@ while \
                           fullname,
                           amount,
                           address)
-        elif choice == 3:
+        elif choice\
+                == 3:
             amount = \
                 order_setup\
                     ()
@@ -144,5 +147,6 @@ while \
                 0:
             exit()
             break
-    except ValueError:
+    except\
+            ValueError:
         print("You have entered a wrong value.")
