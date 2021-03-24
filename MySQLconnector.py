@@ -1,6 +1,7 @@
+# Importing the module mysql.connector
 import mysql.connector as connector
 
-
+# requires a user to connect to the DB
 def user_access_db(hostname, username, password, db_name):
     database_entry = connector.connect(host=hostname, user=username, passwd=password, port="3306",
                                                database=db_name)
@@ -9,6 +10,7 @@ def user_access_db(hostname, username, password, db_name):
 
 
 db_access = 0
+# Temp pre-defined names for the local DB
 try:
 
     if db_access == 0:

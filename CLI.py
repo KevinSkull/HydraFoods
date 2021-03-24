@@ -1,7 +1,10 @@
 # Command Line interface test setup for the backend to add information to the database
+
+# MySql connection to the DB
 from MySQLconnector import *
 
 
+# Function for inserting ordering into the DBMS
 def insert_orders(tablename, full_nameS, amountI, addressS):
     try:
         records_list = [full_nameS, amountI, addressS]
@@ -19,6 +22,7 @@ def insert_orders(tablename, full_nameS, amountI, addressS):
         input("Press Enter")
 
 
+# Function to return amount user inputs, to reduce redundant code
 def order_setup():
 
     amount = int(input("Please enter the amount you wish to order: "))
@@ -26,8 +30,11 @@ def order_setup():
     return amount
 
 
+# Variables called before entering the loop once
 fullname = str(input("Please enter your full name: "))
 address = str(input("Please enter your full address: "))
+
+# Loop for users to pick an order type
 while True:
     try:
 
