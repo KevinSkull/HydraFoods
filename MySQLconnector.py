@@ -17,12 +17,12 @@ try:
 
         hostname = "localhost"
 
-#        username = "customers" (Note this was for temp db)
-        username = "root"
-#        password = "customer" (Note this was for temp db)
-        password = ""
-#        db_name = "food_ordering" (Note this was for temp db)
-        db_name = "wordpress_db"
+        username = "customers" 
+        #username = "root"
+        password = "customer"
+#        password = ""
+        db_name = "food_ordering" 
+ #       db_name = "wordpress_db"
         try:
             db_setup = user_access_db(hostname, username, password, db_name)
             commands = db_setup.cursor()
