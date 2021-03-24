@@ -6,22 +6,31 @@ import mysql.connector as connector
 
 
 
-db_access = 0
+db_access =\
+    0
 # Temp pre-defined names for the local DB
 try:
-    if db_access == 0:
+    if db_access\
+            == 0:
 
         hostname = "localhost"
 
-        username = "customers"
+        username\
+            = "customers"
         #username = "root"
-        password = "customer"
+        password \
+            = "customer"
 #        password = ""
-        db_name = "food_ordering"
+        db_name \
+            = "food_ordering"
  #       db_name = "wordpress_db"
 
 
-        database_entry = connector.connect(host=hostname,
+        database_entry = \
+            connector.\
+            connect\
+            (host=
+                                           hostname,
                                                user=username,
                                                passwd=password,
                                                port="3307",
