@@ -5,8 +5,8 @@ Here is the [**website**](https://hydrafoodscom.wordpress.com/home/)
 
 ## Prerequisites
 * MySQL Community Server **Use Legacy Authentication Method**
-* Python 3.8
-* mysql-connector package 32 or 64 bit
+* Python 3.8.
+* mysql-connector package 32 or 64 bit.
 
 ## Contributing
 We welcome any contributions from anyone. 
