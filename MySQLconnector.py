@@ -13,7 +13,6 @@ def user_access_db(hostname, username, password, db_name):
 db_access = 0
 # Temp pre-defined names for the local DB
 try:
-
     if db_access == 0:
 
         hostname = "localhost"
