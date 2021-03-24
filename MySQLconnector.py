@@ -1,6 +1,7 @@
 # Importing the module mysql.connector
 import mysql.connector as connector
 
+
 # requires a user to connect to the DB
 def user_access_db(hostname, username, password, db_name):
     database_entry = connector.connect(host=hostname, user=username, passwd=password, port="3306",
@@ -17,11 +18,12 @@ try:
 
         hostname = "localhost"
 
-        username = "customers"
-
-        password = "customer"
-
-        db_name = "food_ordering"
+#        username = "customers" (Note this was for temp db)
+        username = "root"
+#        password = "customer" (Note this was for temp db)
+        password = ""
+#        db_name = "food_ordering" (Note this was for temp db)
+        db_name = "wordpress_db"
         try:
             db_setup = user_access_db(hostname, username, password, db_name)
             commands = db_setup.cursor()
