@@ -10,7 +10,7 @@ Here is the [**website**](https://hydrafoodscom.wordpress.com/home/)
 
 ## Contributing
 We welcome any contributions from anyone. 
-to proceed please see our [guidelines for contributing](https://github.com/KevinSkull/HydraFoods/CONTRIBUTING.md).
+to proceed please see our [guidelines for contributing](https://github.com/KevinSkull/HydraFoods/blob/master/CONTRIBUTING.md).
 
 ## License
 Licensed under the Apache License, Version 2.0 (the "License");
