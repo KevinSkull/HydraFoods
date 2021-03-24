@@ -1,6 +1,6 @@
 HydraFoods
 =====
-The backend for the website HydraFoods, written in python for windows and linux
+The backend for the website HydraFoods, written in python for Windows and Linux
 Here is the [**website**](to-be-done)
 
 ## Prerequisites
