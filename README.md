@@ -1,7 +1,7 @@
 HydraFoods
 =====
 The backend for the website HydraFoods, written in python for Windows and Linux
-Here is the [**website**](to-be-done)
+Here is the [**website**](https://hydrafoodscom.wordpress.com/home/)
 
 ## Prerequisites
 * MySQL Community Server **Use Legacy Authentication Method**
