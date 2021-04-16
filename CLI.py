@@ -2,20 +2,33 @@
 
 # MySql connection to the DB
 from MySQLconnector import *
+import os
+import time
+
+if not os.path.exists('log.txt'):
+    with open('log.txt', 'w') as f:
+        f.write('0')
+with open('log.txt', 'r') as f:
+    st = int(f.read())
+    st += 1
+with open('log.txt', 'w') as f:
+    f.write(str(st))
+
+f = open("log.txt", "r")
+auto_increment = f.read()
 
 
 # Function for inserting ordering into the DBMS
-def insert_orders(tablename, full_nameS, amountI, addressS):
+def insert_orders(form_id, field_id, user_info):
     try:
-        records_list = [full_nameS, amountI, addressS]
-        attributes_list = ['full_name', 'amount', 'address']
+        records_list = ["", auto_increment, form_id, field_id, user_info, time.strftime("%Y-%m-%d %H:%M:%S")]
+        attributes_list = ['id', 'entry_id', 'form_id', "field_id", "value", "date"]
         formatted_record_list = str(records_list).replace("[", "").replace("]", "")
         formatted_atk_list = str(attributes_list).replace("'", "").replace("[", "").replace("]", "")
-        one_row = "INSERT INTO {} ({}) VALUES ({})".format(tablename, formatted_atk_list, formatted_record_list)
+        one_row = "INSERT INTO {} ({}) VALUES ({})".format("wp_wpforms_entry_fields", formatted_atk_list, formatted_record_list)
         commands.execute(one_row)
         db_setup.commit()
         print("Order has been recorded")
-        input("Press Enter")
 
     except ValueError:
         print("You have entered something wrong")
@@ -31,6 +44,7 @@ def order_setup():
 
 
 # Variables called before entering the loop once
+
 fullname = str(input("Please enter your full name: "))
 address = str(input("Please enter your full address: "))
 
@@ -47,33 +61,30 @@ while True:
 
         if choice == 1:
             amount = order_setup()
-            table_name = "chips_ordering"
-            insert_orders(table_name, fullname, amount, address)
+
+            # note form_id is 75 for chip, 78 for fish, 81 for burgers, 83 for Chicken
+            # note field_id is 0 for name, 8 for amount, 7 for address
+            insert_orders(75, 0, fullname)
+            insert_orders(75, 8, amount)
+            insert_orders(75, 7, address)
         elif choice == 2:
             amount = order_setup()
-            table_name = "fish_ordering"
+            insert_orders(78, 0, fullname)
+            insert_orders(78, 8, amount)
+            insert_orders(78, 7, address)
+
         elif choice == 3:
             amount = order_setup()
-            table_name = "chicken_ordering"
+            insert_orders(81, 0, fullname)
+            insert_orders(81, 8, amount)
+            insert_orders(81, 7, address)
         elif choice == 4:
             amount = order_setup()
-            table_name = "burger_ordering"
+            insert_orders(83, 0, fullname)
+            insert_orders(83, 8, amount)
+            insert_orders(83, 7, address)
         elif choice == 5 or choice == 0:
             exit()
             break
     except ValueError:
         print("You have entered a wrong value.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
