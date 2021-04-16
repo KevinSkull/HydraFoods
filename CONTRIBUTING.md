@@ -12,6 +12,6 @@ When you submit any code changes, your submissions to the repo are understood to
 Please note any requirements for an enchantment or issue before submitting your submission
 
 # Coding Style
-* Tab for indentation
-* 120 character line length
-* Recommended to use pycharm
+* Tab for indentation.
+* 120 character line length.
+* Recommended to use pycharm.
