@@ -33,7 +33,7 @@ try:
                                            hostname,
                                                user=username,
                                                passwd=password,
-                                               port="3307",
+                                               port="3306",
                                                database=db_name)
 
         commands = database_entry.cursor()
