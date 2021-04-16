@@ -52,7 +52,7 @@ address = str(input("Please enter your full address: "))
 while True:
     try:
 
-        choice = int(input("Pick a choice between foods\n"
+        choice = int(input(" Pick a choice between foods\n"
                                "1. Chips\n"
                                "2. Fish\n"
                                "3. Chicken\n"
