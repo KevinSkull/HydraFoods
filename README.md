@@ -1,12 +1,20 @@
 HydraFoods
 =====
-The backend for the website HydraFoods, written in python for Windows and Linux
-Here is the [**website**](https://hydrafoodscom.wordpress.com/home/)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)]
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+
+The backend for the locally hosted website HydraFoods, written in python for Windows and Linux
+
 
 ## Prerequisites
 * MySQL Community Server **Use Legacy Authentication Method**
 * Python 3.8.
 * mysql-connector package 32 or 64 bit.
+* WPforms
+* Apache
+* phpMyAdmin
+Recommended to use a WAMP setup for the website.
 
 ## Contributing
 We welcome any contributions from anyone. 
